@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "health_clean",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "display_name": "Highway Community Hospital", "amenity": "hospital", "adm2_name": "Dhading" }, "geometry": { "type": "Point", "coordinates": [ 84.8334747, 27.8111146 ] } },
+{ "type": "Feature", "properties": { "display_name": "Benighat Health Cllinic", "amenity": "clinic", "adm2_name": "Dhading" }, "geometry": { "type": "Point", "coordinates": [ 84.7800149, 27.8106241 ] } },
+{ "type": "Feature", "properties": { "display_name": "Highway Healthcare Pharma", "amenity": "pharmacy", "adm2_name": "Dhading" }, "geometry": { "type": "Point", "coordinates": [ 84.8278453, 27.8136943 ] } },
+{ "type": "Feature", "properties": { "display_name": "Bihani Pharmacy", "amenity": "pharmacy", "adm2_name": "Dhading" }, "geometry": { "type": "Point", "coordinates": [ 84.7043051, 27.8056745 ] } },
+{ "type": "Feature", "properties": { "display_name": "hospital", "amenity": "hospital", "adm2_name": "Dhading" }, "geometry": { "type": "Point", "coordinates": [ 84.880029383976819, 27.806438818970182 ] } }
+]
+}

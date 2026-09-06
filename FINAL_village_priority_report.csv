@@ -1,0 +1,45 @@
+Village,District,Access Status,Nearby Broken Bridges,Priority Score,Priority Level
+Mailung,Rasuwa,ISOLATED - no route by car or foot,6,10.0,HIGH
+Shyaphru Bensi,Rasuwa,ISOLATED - no route by car or foot,4,9.4,HIGH
+Rasuwa Gadhi,Rasuwa,ISOLATED - no route by car or foot,2,8.2,HIGH
+Resuo,Rasuwa,ISOLATED - no route by car or foot,2,8.2,HIGH
+Simle,Rasuwa,ISOLATED - no route by car or foot,1,7.6,HIGH
+Galchhi area #41,Dhading,ISOLATED - no route by car or foot,1,7.6,HIGH
+Betrawati,Nuwakot,No car route - walkable only (50.8 km on foot),4,7.4,HIGH
+Naubisephat,Nuwakot,No car route - walkable only (52.1 km on foot),4,7.4,HIGH
+Bhainse,Nuwakot,No car route - walkable only (48.5 km on foot),3,6.74,MEDIUM
+Devighat,Nuwakot,No car route - walkable only (32.3 km on foot),4,6.692,MEDIUM
+Bidur area #5,Nuwakot,No car route - walkable only (29.9 km on foot),4,6.596,MEDIUM
+Bidur area #7,Nuwakot,No car route - walkable only (28.8 km on foot),4,6.5520000000000005,MEDIUM
+Bidur area #6,Nuwakot,No car route - walkable only (28.2 km on foot),4,6.5280000000000005,MEDIUM
+Tarakeshwor area,Nuwakot,No car route - walkable only (25.9 km on foot),2,5.236000000000001,MEDIUM
+Belkotgadhi area,Nuwakot,No car route - walkable only (25.1 km on foot),2,5.204000000000001,MEDIUM
+Galchhi area #27,Dhading,No car route - walkable only (16.3 km on foot),1,4.252000000000001,MEDIUM
+Galchhi area #31,Dhading,No car route - walkable only (15.0 km on foot),1,4.2,MEDIUM
+Galchhi area #32,Dhading,No car route - walkable only (14.3 km on foot),1,4.172000000000001,MEDIUM
+Galchhi area #42,Dhading,No car route - walkable only (13.2 km on foot),1,4.128,MEDIUM
+Galchhi area #30,Dhading,No car route - walkable only (12.5 km on foot),1,4.1,MEDIUM
+Galchhi area #34,Dhading,No car route - walkable only (12.5 km on foot),1,4.1,MEDIUM
+Silintar,Gorkha,No car route - walkable only (17.9 km on foot),0,3.716,LOW
+Gajuri area #26,Dhading,Car-reachable (5.7 km),2,2.4280000000000004,LOW
+Ghatbesi,Dhading,Car-reachable (3.0 km),2,2.3200000000000003,LOW
+MaheshDovan,Dhading,Car-reachable (13.0 km),1,2.12,LOW
+Galchhi area #40,Dhading,Car-reachable (11.9 km),1,2.076,LOW
+Galchhi area #33,Dhading,Car-reachable (11.6 km),1,2.064,LOW
+Adamghat #43,Dhading,Car-reachable (7.9 km),1,1.916,LOW
+Adamghat #8,Dhading,Car-reachable (7.8 km),1,1.912,LOW
+Siddhalek area #38,Dhading,Car-reachable (6.8 km),1,1.872,LOW
+Siddhalek area #39,Dhading,Car-reachable (6.8 km),1,1.872,LOW
+Siddhalek area #37,Dhading,Car-reachable (6.6 km),1,1.864,LOW
+Gajuri area #36,Dhading,Car-reachable (6.5 km),1,1.86,LOW
+Gajuri area #35,Dhading,Car-reachable (6.4 km),1,1.856,LOW
+Siddhalek area #29,Dhading,Car-reachable (6.3 km),1,1.852,LOW
+Mugling,Chitawan,Car-reachable (21.2 km),0,1.848,LOW
+Siddhalek area #28,Dhading,Car-reachable (2.0 km),1,1.6800000000000002,LOW
+Purano Malekhu,Dhading,Car-reachable (0.6 km),1,1.624,LOW
+Malekhu,Dhading,Car-reachable (0.1 km),1,1.604,LOW
+Phishling,Chitawan,Car-reachable (7.3 km),0,1.292,LOW
+Dhussa,Dhading,Car-reachable (4.3 km),0,1.172,LOW
+Salanghat,Dhading,Car-reachable (3.1 km),0,1.124,LOW
+Ghyalchok,Dhading,Car-reachable (1.5 km),0,1.06,LOW
+Benighat Rorang,Dhading,Car-reachable (1.4 km),0,1.056,LOW

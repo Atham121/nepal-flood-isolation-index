@@ -1,0 +1,45 @@
+village,district,nearest_hospital,distance_km,status
+Resuo,Rasuwa,,,ISOLATED - no route to any hospital
+Shyaphru Bensi,Rasuwa,,,ISOLATED - no route to any hospital
+Rasuwa Gadhi,Rasuwa,,,ISOLATED - no route to any hospital
+Simle,Rasuwa,,,ISOLATED - no route to any hospital
+Mailung,Rasuwa,,,ISOLATED - no route to any hospital
+Bidur area #5,Nuwakot,hospital,29.9,Reachable
+Bidur area #6,Nuwakot,hospital,28.2,Reachable
+Bidur area #7,Nuwakot,hospital,28.8,Reachable
+Adamghat #8,Dhading,hospital,7.8,Reachable
+MaheshDovan,Dhading,hospital,13.0,Reachable
+Ghatbesi,Dhading,hospital,3.0,Reachable
+Devighat,Nuwakot,hospital,32.3,Reachable
+Purano Malekhu,Dhading,Highway Community Hospital,0.6,Reachable
+Ghyalchok,Dhading,Benighat Health Cllinic,1.6,Reachable
+Benighat Rorang,Dhading,Benighat Health Cllinic,1.4,Reachable
+Dhussa,Dhading,Benighat Health Cllinic,4.3,Reachable
+Betrawati,Nuwakot,hospital,50.8,Reachable
+Bhainse,Nuwakot,hospital,48.5,Reachable
+Silintar,Gorkha,Bihani Pharmacy,17.9,Reachable
+Malekhu,Dhading,Highway Healthcare Pharma,0.1,Reachable
+Phishling,Chitawan,Bihani Pharmacy,7.3,Reachable
+Mugling,Chitawan,Bihani Pharmacy,21.2,Reachable
+Salanghat,Dhading,Benighat Health Cllinic,3.1,Reachable
+Naubisephat,Nuwakot,hospital,52.1,Reachable
+Tarakeshwor area,Nuwakot,hospital,25.9,Reachable
+Belkotgadhi area,Nuwakot,hospital,25.1,Reachable
+Gajuri area #26,Dhading,hospital,5.7,Reachable
+Galchhi area #27,Dhading,hospital,16.3,Reachable
+Siddhalek area #28,Dhading,Highway Community Hospital,2.0,Reachable
+Siddhalek area #29,Dhading,Highway Community Hospital,6.3,Reachable
+Galchhi area #30,Dhading,hospital,12.5,Reachable
+Galchhi area #31,Dhading,hospital,15.0,Reachable
+Galchhi area #32,Dhading,hospital,14.3,Reachable
+Galchhi area #33,Dhading,hospital,12.1,Reachable
+Galchhi area #34,Dhading,hospital,12.5,Reachable
+Gajuri area #35,Dhading,hospital,6.4,Reachable
+Gajuri area #36,Dhading,hospital,6.7,Reachable
+Siddhalek area #37,Dhading,hospital,6.6,Reachable
+Siddhalek area #38,Dhading,hospital,6.8,Reachable
+Siddhalek area #39,Dhading,hospital,7.6,Reachable
+Galchhi area #40,Dhading,hospital,12.0,Reachable
+Galchhi area #41,Dhading,,,ISOLATED - no route to any hospital
+Galchhi area #42,Dhading,hospital,13.2,Reachable
+Adamghat #43,Dhading,hospital,7.9,Reachable

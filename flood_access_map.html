@@ -1,0 +1,2794 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2a8505091a6d72185f85f0126b558a73 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 30px; left: 30px; z-index:9999; background:white;
+            padding:10px; border:2px solid grey; border-radius:5px; font-size:14px;">
+<b>Legend</b><br>
+🟢 Village - Reachable<br>
+🔴 Village - Isolated<br>
+🔵 Hospital / Health facility<br>
+⚫ Washed-out bridge<br>
+</div>
+    
+            <div class="folium-map" id="map_2a8505091a6d72185f85f0126b558a73" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2a8505091a6d72185f85f0126b558a73 = L.map(
+                "map_2a8505091a6d72185f85f0126b558a73",
+                {
+                    center: [27.86808290632882, 84.97688231622612],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bb338cde9ba8ee68a82f82dca6956744 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bb338cde9ba8ee68a82f82dca6956744.addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var circle_marker_143a0b4439bda65bb074384f1f3282f4 = L.circleMarker(
+                [28.280321, 85.378218],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_8fb33b8a49dcc94fda190fc6051d6ee1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_30d2c9556727ce390f6933071f7a33d9 = $(`<div id="html_30d2c9556727ce390f6933071f7a33d9" style="width: 100.0%; height: 100.0%;">     <b>Resuo</b><br>     District: Rasuwa<br>     Status: ISOLATED - no route to any hospital<br>     Nearest hospital: nan<br>     Distance: nan km     </div>`)[0];
+                popup_8fb33b8a49dcc94fda190fc6051d6ee1.setContent(html_30d2c9556727ce390f6933071f7a33d9);
+            
+        
+
+        circle_marker_143a0b4439bda65bb074384f1f3282f4.bindPopup(popup_8fb33b8a49dcc94fda190fc6051d6ee1)
+        ;
+
+        
+    
+    
+            var circle_marker_aff15ac24c96a0442be11284eaee4be9 = L.circleMarker(
+                [28.164569, 85.3427433],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_11b3f0223efcf30d0d8ecee6d5b5115e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ac2da569a3c75dca89cffa463ba52d71 = $(`<div id="html_ac2da569a3c75dca89cffa463ba52d71" style="width: 100.0%; height: 100.0%;">     <b>Shyaphru Bensi</b><br>     District: Rasuwa<br>     Status: ISOLATED - no route to any hospital<br>     Nearest hospital: nan<br>     Distance: nan km     </div>`)[0];
+                popup_11b3f0223efcf30d0d8ecee6d5b5115e.setContent(html_ac2da569a3c75dca89cffa463ba52d71);
+            
+        
+
+        circle_marker_aff15ac24c96a0442be11284eaee4be9.bindPopup(popup_11b3f0223efcf30d0d8ecee6d5b5115e)
+        ;
+
+        
+    
+    
+            var circle_marker_0b9b55fc85eaf6ae6bd4d3e2983e93da = L.circleMarker(
+                [28.2777749, 85.3777789],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_981a98c5eeb78eaab381c8add11296c7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f8004c166616336134ed6dcee53ebf1c = $(`<div id="html_f8004c166616336134ed6dcee53ebf1c" style="width: 100.0%; height: 100.0%;">     <b>Rasuwa Gadhi</b><br>     District: Rasuwa<br>     Status: ISOLATED - no route to any hospital<br>     Nearest hospital: nan<br>     Distance: nan km     </div>`)[0];
+                popup_981a98c5eeb78eaab381c8add11296c7.setContent(html_f8004c166616336134ed6dcee53ebf1c);
+            
+        
+
+        circle_marker_0b9b55fc85eaf6ae6bd4d3e2983e93da.bindPopup(popup_981a98c5eeb78eaab381c8add11296c7)
+        ;
+
+        
+    
+    
+            var circle_marker_b925760311d2414d6a922664dd4fb0cf = L.circleMarker(
+                [28.0292002, 85.1911972],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_4b4848231472ccfbabc863f993572a66 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cd003d49741316424614c0fe5219f5e7 = $(`<div id="html_cd003d49741316424614c0fe5219f5e7" style="width: 100.0%; height: 100.0%;">     <b>Simle</b><br>     District: Rasuwa<br>     Status: ISOLATED - no route to any hospital<br>     Nearest hospital: nan<br>     Distance: nan km     </div>`)[0];
+                popup_4b4848231472ccfbabc863f993572a66.setContent(html_cd003d49741316424614c0fe5219f5e7);
+            
+        
+
+        circle_marker_b925760311d2414d6a922664dd4fb0cf.bindPopup(popup_4b4848231472ccfbabc863f993572a66)
+        ;
+
+        
+    
+    
+            var circle_marker_70eb83a1680d6721983d15596f772071 = L.circleMarker(
+                [28.0717737, 85.2070031],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_0096f6160d2d378eb2a85d6447446fa7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a379dce23bd2ca965db59b896fff9ea5 = $(`<div id="html_a379dce23bd2ca965db59b896fff9ea5" style="width: 100.0%; height: 100.0%;">     <b>Mailung</b><br>     District: Rasuwa<br>     Status: ISOLATED - no route to any hospital<br>     Nearest hospital: nan<br>     Distance: nan km     </div>`)[0];
+                popup_0096f6160d2d378eb2a85d6447446fa7.setContent(html_a379dce23bd2ca965db59b896fff9ea5);
+            
+        
+
+        circle_marker_70eb83a1680d6721983d15596f772071.bindPopup(popup_0096f6160d2d378eb2a85d6447446fa7)
+        ;
+
+        
+    
+    
+            var circle_marker_0bb74f8cb48bbc079cb708b12a2536d1 = L.circleMarker(
+                [27.8581113, 85.0947694],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_cb86cb4ef5dd710ae682e7b1fba8e9db = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d52bba77fdf46558aa8d09845be066bc = $(`<div id="html_d52bba77fdf46558aa8d09845be066bc" style="width: 100.0%; height: 100.0%;">     <b>Bidur</b><br>     District: Nuwakot<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 29.9 km     </div>`)[0];
+                popup_cb86cb4ef5dd710ae682e7b1fba8e9db.setContent(html_d52bba77fdf46558aa8d09845be066bc);
+            
+        
+
+        circle_marker_0bb74f8cb48bbc079cb708b12a2536d1.bindPopup(popup_cb86cb4ef5dd710ae682e7b1fba8e9db)
+        ;
+
+        
+    
+    
+            var circle_marker_c0d02756f0aff115956da8f74a095410 = L.circleMarker(
+                [27.8542441, 85.0809059],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_fb678e256be9629cb9e806cc1ea5a52f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7ffcd94ad2dea2bfcecd41d544cf0df5 = $(`<div id="html_7ffcd94ad2dea2bfcecd41d544cf0df5" style="width: 100.0%; height: 100.0%;">     <b>Bidur</b><br>     District: Nuwakot<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 28.2 km     </div>`)[0];
+                popup_fb678e256be9629cb9e806cc1ea5a52f.setContent(html_7ffcd94ad2dea2bfcecd41d544cf0df5);
+            
+        
+
+        circle_marker_c0d02756f0aff115956da8f74a095410.bindPopup(popup_fb678e256be9629cb9e806cc1ea5a52f)
+        ;
+
+        
+    
+    
+            var circle_marker_775f8b90f920ef7bdf94977e734e9c25 = L.circleMarker(
+                [27.8579257, 85.08496],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_0f666bdd613d395cb85092b3678bfb9e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9ecb68c499bf1d033884e902ee010c13 = $(`<div id="html_9ecb68c499bf1d033884e902ee010c13" style="width: 100.0%; height: 100.0%;">     <b>Bidur</b><br>     District: Nuwakot<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 28.8 km     </div>`)[0];
+                popup_0f666bdd613d395cb85092b3678bfb9e.setContent(html_9ecb68c499bf1d033884e902ee010c13);
+            
+        
+
+        circle_marker_775f8b90f920ef7bdf94977e734e9c25.bindPopup(popup_0f666bdd613d395cb85092b3678bfb9e)
+        ;
+
+        
+    
+    
+            var circle_marker_0c6fffc1beac01cb381c397cc92a1457 = L.circleMarker(
+                [27.8069683, 84.942947],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_f873ea09267965ec570363c7cc06f3a7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e7c7a55a4b317e4995cdd29d2024038e = $(`<div id="html_e7c7a55a4b317e4995cdd29d2024038e" style="width: 100.0%; height: 100.0%;">     <b>Adamghat</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 7.8 km     </div>`)[0];
+                popup_f873ea09267965ec570363c7cc06f3a7.setContent(html_e7c7a55a4b317e4995cdd29d2024038e);
+            
+        
+
+        circle_marker_0c6fffc1beac01cb381c397cc92a1457.bindPopup(popup_f873ea09267965ec570363c7cc06f3a7)
+        ;
+
+        
+    
+    
+            var circle_marker_1a93aeb0a5f2c5ea37b98c1fda3cad37 = L.circleMarker(
+                [27.8010451, 84.980042],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_cebdcbf4eddc8748b330f44727b87a27 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e025e87cc6c0b5dc59f361772801b0ae = $(`<div id="html_e025e87cc6c0b5dc59f361772801b0ae" style="width: 100.0%; height: 100.0%;">     <b>MaheshDovan</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 13.0 km     </div>`)[0];
+                popup_cebdcbf4eddc8748b330f44727b87a27.setContent(html_e025e87cc6c0b5dc59f361772801b0ae);
+            
+        
+
+        circle_marker_1a93aeb0a5f2c5ea37b98c1fda3cad37.bindPopup(popup_cebdcbf4eddc8748b330f44727b87a27)
+        ;
+
+        
+    
+    
+            var circle_marker_871df9ad2e75fd85b95095028119fbdd = L.circleMarker(
+                [27.8044981, 84.9052684],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_c35e93cda2189e43b1551612922a3988 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_19482b48c0820f42695722906429b4b2 = $(`<div id="html_19482b48c0820f42695722906429b4b2" style="width: 100.0%; height: 100.0%;">     <b>Ghatbesi</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 3.0 km     </div>`)[0];
+                popup_c35e93cda2189e43b1551612922a3988.setContent(html_19482b48c0820f42695722906429b4b2);
+            
+        
+
+        circle_marker_871df9ad2e75fd85b95095028119fbdd.bindPopup(popup_c35e93cda2189e43b1551612922a3988)
+        ;
+
+        
+    
+    
+            var circle_marker_4401c650ec719d4ac03413a198e84c8a = L.circleMarker(
+                [27.8600323, 85.1100635],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_99d42c5c0608f080b678f715d892818e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5b4795a6ae02cd0cdd2fb97010623269 = $(`<div id="html_5b4795a6ae02cd0cdd2fb97010623269" style="width: 100.0%; height: 100.0%;">     <b>Devighat</b><br>     District: Nuwakot<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 32.3 km     </div>`)[0];
+                popup_99d42c5c0608f080b678f715d892818e.setContent(html_5b4795a6ae02cd0cdd2fb97010623269);
+            
+        
+
+        circle_marker_4401c650ec719d4ac03413a198e84c8a.bindPopup(popup_99d42c5c0608f080b678f715d892818e)
+        ;
+
+        
+    
+    
+            var circle_marker_e6fff5ca19aa07e8400f7cf79b34b51c = L.circleMarker(
+                [27.8062193, 84.836209],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_bc3cb876720b4a9a4db6e1a589c37389 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f77d69e9583874a35d1e026a9f99e0c6 = $(`<div id="html_f77d69e9583874a35d1e026a9f99e0c6" style="width: 100.0%; height: 100.0%;">     <b>Purano Malekhu</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: Highway Community Hospital<br>     Distance: 0.6 km     </div>`)[0];
+                popup_bc3cb876720b4a9a4db6e1a589c37389.setContent(html_f77d69e9583874a35d1e026a9f99e0c6);
+            
+        
+
+        circle_marker_e6fff5ca19aa07e8400f7cf79b34b51c.bindPopup(popup_bc3cb876720b4a9a4db6e1a589c37389)
+        ;
+
+        
+    
+    
+            var circle_marker_dcdfdaa44e301e948330b27d40804097 = L.circleMarker(
+                [27.8106448, 84.7724679],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_f652feb462ec83bbcbc4fd21966d7051 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ae5447bc612aaa4cce8ced31ce5373a4 = $(`<div id="html_ae5447bc612aaa4cce8ced31ce5373a4" style="width: 100.0%; height: 100.0%;">     <b>Ghyalchok</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: Benighat Health Cllinic<br>     Distance: 1.6 km     </div>`)[0];
+                popup_f652feb462ec83bbcbc4fd21966d7051.setContent(html_ae5447bc612aaa4cce8ced31ce5373a4);
+            
+        
+
+        circle_marker_dcdfdaa44e301e948330b27d40804097.bindPopup(popup_f652feb462ec83bbcbc4fd21966d7051)
+        ;
+
+        
+    
+    
+            var circle_marker_db402fee02aad4ab40cc3dad885b6a7f = L.circleMarker(
+                [27.8074205, 84.769707],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_267046e2ee362cc0ca8790585f30fdae = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4315fd3afec2e23c88769bce18aa2e51 = $(`<div id="html_4315fd3afec2e23c88769bce18aa2e51" style="width: 100.0%; height: 100.0%;">     <b>Benighat Rorang</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: Benighat Health Cllinic<br>     Distance: 1.4 km     </div>`)[0];
+                popup_267046e2ee362cc0ca8790585f30fdae.setContent(html_4315fd3afec2e23c88769bce18aa2e51);
+            
+        
+
+        circle_marker_db402fee02aad4ab40cc3dad885b6a7f.bindPopup(popup_267046e2ee362cc0ca8790585f30fdae)
+        ;
+
+        
+    
+    
+            var circle_marker_2f0b7daae4c6d1b573de4b5f90ca8a16 = L.circleMarker(
+                [27.8038614, 84.7516264],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_147be79fcb27b74d17c0b04ed0d60496 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b079719b87a61f68fee95cfb03ee2b5f = $(`<div id="html_b079719b87a61f68fee95cfb03ee2b5f" style="width: 100.0%; height: 100.0%;">     <b>Dhussa</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: Benighat Health Cllinic<br>     Distance: 4.3 km     </div>`)[0];
+                popup_147be79fcb27b74d17c0b04ed0d60496.setContent(html_b079719b87a61f68fee95cfb03ee2b5f);
+            
+        
+
+        circle_marker_2f0b7daae4c6d1b573de4b5f90ca8a16.bindPopup(popup_147be79fcb27b74d17c0b04ed0d60496)
+        ;
+
+        
+    
+    
+            var circle_marker_13c05c0279e1fa5c9613aa4bbb26b031 = L.circleMarker(
+                [27.9731085, 85.1859528],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_b64c2e6cd78828422e1682d6c421c9e2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_de431f0c3a49b4371dbd839bdd4f8c3e = $(`<div id="html_de431f0c3a49b4371dbd839bdd4f8c3e" style="width: 100.0%; height: 100.0%;">     <b>Betrawati</b><br>     District: Nuwakot<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 50.8 km     </div>`)[0];
+                popup_b64c2e6cd78828422e1682d6c421c9e2.setContent(html_de431f0c3a49b4371dbd839bdd4f8c3e);
+            
+        
+
+        circle_marker_13c05c0279e1fa5c9613aa4bbb26b031.bindPopup(popup_b64c2e6cd78828422e1682d6c421c9e2)
+        ;
+
+        
+    
+    
+            var circle_marker_fd332f1d07dee67c0cfd5422382299f5 = L.circleMarker(
+                [27.9603671, 85.1703311],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_735c29326fb64fc5b4c42de6effed419 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b02231f1282332802158659a46f511cf = $(`<div id="html_b02231f1282332802158659a46f511cf" style="width: 100.0%; height: 100.0%;">     <b>Bhainse</b><br>     District: Nuwakot<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 48.5 km     </div>`)[0];
+                popup_735c29326fb64fc5b4c42de6effed419.setContent(html_b02231f1282332802158659a46f511cf);
+            
+        
+
+        circle_marker_fd332f1d07dee67c0cfd5422382299f5.bindPopup(popup_735c29326fb64fc5b4c42de6effed419)
+        ;
+
+        
+    
+    
+            var circle_marker_ac126a6d9571f2f4700d43d51b4fc01f = L.circleMarker(
+                [27.8820254, 84.590809],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_790d1848e705893eb5ea373e237978db = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a0c960129b1526f589e98e8e7212a24b = $(`<div id="html_a0c960129b1526f589e98e8e7212a24b" style="width: 100.0%; height: 100.0%;">     <b>Silintar</b><br>     District: Gorkha<br>     Status: Reachable<br>     Nearest hospital: Bihani Pharmacy<br>     Distance: 17.9 km     </div>`)[0];
+                popup_790d1848e705893eb5ea373e237978db.setContent(html_a0c960129b1526f589e98e8e7212a24b);
+            
+        
+
+        circle_marker_ac126a6d9571f2f4700d43d51b4fc01f.bindPopup(popup_790d1848e705893eb5ea373e237978db)
+        ;
+
+        
+    
+    
+            var circle_marker_31df835ac98d0f2d44cdafea16917d18 = L.circleMarker(
+                [27.813705, 84.82724],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_92a37ff917f1b38d705b4c1107161dea = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3a0d5ae5cfaec78f46aa6e249ae8e793 = $(`<div id="html_3a0d5ae5cfaec78f46aa6e249ae8e793" style="width: 100.0%; height: 100.0%;">     <b>Malekhu</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: Highway Healthcare Pharma<br>     Distance: 0.1 km     </div>`)[0];
+                popup_92a37ff917f1b38d705b4c1107161dea.setContent(html_3a0d5ae5cfaec78f46aa6e249ae8e793);
+            
+        
+
+        circle_marker_31df835ac98d0f2d44cdafea16917d18.bindPopup(popup_92a37ff917f1b38d705b4c1107161dea)
+        ;
+
+        
+    
+    
+            var circle_marker_576a6ea7ec9a4ef1e5ac64b61729ff18 = L.circleMarker(
+                [27.8428051, 84.661724],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_a6b0a615846aa8f3f383c4b5545d9fce = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d32b3a1ac4778f991e46442f0a5253e7 = $(`<div id="html_d32b3a1ac4778f991e46442f0a5253e7" style="width: 100.0%; height: 100.0%;">     <b>Phishling</b><br>     District: Chitawan<br>     Status: Reachable<br>     Nearest hospital: Bihani Pharmacy<br>     Distance: 7.3 km     </div>`)[0];
+                popup_a6b0a615846aa8f3f383c4b5545d9fce.setContent(html_d32b3a1ac4778f991e46442f0a5253e7);
+            
+        
+
+        circle_marker_576a6ea7ec9a4ef1e5ac64b61729ff18.bindPopup(popup_a6b0a615846aa8f3f383c4b5545d9fce)
+        ;
+
+        
+    
+    
+            var circle_marker_67e4546dfc6b4d32fe739cd22ad74290 = L.circleMarker(
+                [27.8561616, 84.560951],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_b9156050da7afb8b20f37c7727f68166 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b5c5d5c8cf77f3fdfc28a4957617efe2 = $(`<div id="html_b5c5d5c8cf77f3fdfc28a4957617efe2" style="width: 100.0%; height: 100.0%;">     <b>Mugling</b><br>     District: Chitawan<br>     Status: Reachable<br>     Nearest hospital: Bihani Pharmacy<br>     Distance: 21.2 km     </div>`)[0];
+                popup_b9156050da7afb8b20f37c7727f68166.setContent(html_b5c5d5c8cf77f3fdfc28a4957617efe2);
+            
+        
+
+        circle_marker_67e4546dfc6b4d32fe739cd22ad74290.bindPopup(popup_b9156050da7afb8b20f37c7727f68166)
+        ;
+
+        
+    
+    
+            var circle_marker_f9db73b736d09843045d5671e6c51be0 = L.circleMarker(
+                [27.8163594, 84.8083472],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_bb89edc68d8e40f963e35dfc495fd4bf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d9437ba71f7aef50ce57ebe906385596 = $(`<div id="html_d9437ba71f7aef50ce57ebe906385596" style="width: 100.0%; height: 100.0%;">     <b>Salanghat</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: Benighat Health Cllinic<br>     Distance: 3.1 km     </div>`)[0];
+                popup_bb89edc68d8e40f963e35dfc495fd4bf.setContent(html_d9437ba71f7aef50ce57ebe906385596);
+            
+        
+
+        circle_marker_f9db73b736d09843045d5671e6c51be0.bindPopup(popup_bb89edc68d8e40f963e35dfc495fd4bf)
+        ;
+
+        
+    
+    
+            var circle_marker_adfe8dbc105763faa8fdd2fb30de0175 = L.circleMarker(
+                [27.984691, 85.1825623],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_1f516e2deca63a8809e2d7b749aefc43 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_642731778267d9c45d80e26c4ebac3df = $(`<div id="html_642731778267d9c45d80e26c4ebac3df" style="width: 100.0%; height: 100.0%;">     <b>Naubisephat</b><br>     District: Nuwakot<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 52.1 km     </div>`)[0];
+                popup_1f516e2deca63a8809e2d7b749aefc43.setContent(html_642731778267d9c45d80e26c4ebac3df);
+            
+        
+
+        circle_marker_adfe8dbc105763faa8fdd2fb30de0175.bindPopup(popup_1f516e2deca63a8809e2d7b749aefc43)
+        ;
+
+        
+    
+    
+            var circle_marker_c3d8368fd197c2f19b86880ddc3de530 = L.circleMarker(
+                [27.85997615405242, 85.05381872726444],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_ca4fbdeaa9034a7c36f3e6dcb4a6460a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_463da734490cc23e8dd94fff7713c8fc = $(`<div id="html_463da734490cc23e8dd94fff7713c8fc" style="width: 100.0%; height: 100.0%;">     <b>Tarakeshwor</b><br>     District: Nuwakot<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 25.9 km     </div>`)[0];
+                popup_ca4fbdeaa9034a7c36f3e6dcb4a6460a.setContent(html_463da734490cc23e8dd94fff7713c8fc);
+            
+        
+
+        circle_marker_c3d8368fd197c2f19b86880ddc3de530.bindPopup(popup_ca4fbdeaa9034a7c36f3e6dcb4a6460a)
+        ;
+
+        
+    
+    
+            var circle_marker_5a8f46e132a71a193a2e1e66b3204d6a = L.circleMarker(
+                [27.857592120338925, 85.04701658446889],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_1bdd874e456622a13c5e97aca03fc9e1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_86093626c7da940a287ddefe1d5e4491 = $(`<div id="html_86093626c7da940a287ddefe1d5e4491" style="width: 100.0%; height: 100.0%;">     <b>Belkotgadhi</b><br>     District: Nuwakot<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 25.1 km     </div>`)[0];
+                popup_1bdd874e456622a13c5e97aca03fc9e1.setContent(html_86093626c7da940a287ddefe1d5e4491);
+            
+        
+
+        circle_marker_5a8f46e132a71a193a2e1e66b3204d6a.bindPopup(popup_1bdd874e456622a13c5e97aca03fc9e1)
+        ;
+
+        
+    
+    
+            var circle_marker_75dc32c94c6dc4767b2fde13b0f7891d = L.circleMarker(
+                [27.79580903416534, 84.92613492187898],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_2d41e41e2de39c665780d8bc231b0d5a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4501e8f1296b270808e8c1b352e2256e = $(`<div id="html_4501e8f1296b270808e8c1b352e2256e" style="width: 100.0%; height: 100.0%;">     <b>Gajuri</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 5.7 km     </div>`)[0];
+                popup_2d41e41e2de39c665780d8bc231b0d5a.setContent(html_4501e8f1296b270808e8c1b352e2256e);
+            
+        
+
+        circle_marker_75dc32c94c6dc4767b2fde13b0f7891d.bindPopup(popup_2d41e41e2de39c665780d8bc231b0d5a)
+        ;
+
+        
+    
+    
+            var circle_marker_ea9295d87ab25cedcfbc59c499a81458 = L.circleMarker(
+                [27.80542838524028, 85.00336455802415],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_6c818dac04234c76323f82cb6dd01d08 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e9e0a8996a6bfdab47a9cc5171e860f2 = $(`<div id="html_e9e0a8996a6bfdab47a9cc5171e860f2" style="width: 100.0%; height: 100.0%;">     <b>Galchhi</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 16.3 km     </div>`)[0];
+                popup_6c818dac04234c76323f82cb6dd01d08.setContent(html_e9e0a8996a6bfdab47a9cc5171e860f2);
+            
+        
+
+        circle_marker_ea9295d87ab25cedcfbc59c499a81458.bindPopup(popup_6c818dac04234c76323f82cb6dd01d08)
+        ;
+
+        
+    
+    
+            var circle_marker_5eb81c9062d5ee905e85eef9af711dad = L.circleMarker(
+                [27.800337131116525, 84.83786731084373],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_91ff7a4aa44ab9cde96ea299cce43bcf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8a996a1b1ba3cf2d5335114f0508cfa8 = $(`<div id="html_8a996a1b1ba3cf2d5335114f0508cfa8" style="width: 100.0%; height: 100.0%;">     <b>Siddhalek</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: Highway Community Hospital<br>     Distance: 2.0 km     </div>`)[0];
+                popup_91ff7a4aa44ab9cde96ea299cce43bcf.setContent(html_8a996a1b1ba3cf2d5335114f0508cfa8);
+            
+        
+
+        circle_marker_5eb81c9062d5ee905e85eef9af711dad.bindPopup(popup_91ff7a4aa44ab9cde96ea299cce43bcf)
+        ;
+
+        
+    
+    
+            var circle_marker_b457e2d3fea79af24c0b9155ef3a1d00 = L.circleMarker(
+                [27.80124423496482, 84.8618799194718],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_23575b26ac4030039890c215803cf420 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ac43773519b345840fd561fa41b3a6e6 = $(`<div id="html_ac43773519b345840fd561fa41b3a6e6" style="width: 100.0%; height: 100.0%;">     <b>Siddhalek</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: Highway Community Hospital<br>     Distance: 6.3 km     </div>`)[0];
+                popup_23575b26ac4030039890c215803cf420.setContent(html_ac43773519b345840fd561fa41b3a6e6);
+            
+        
+
+        circle_marker_b457e2d3fea79af24c0b9155ef3a1d00.bindPopup(popup_23575b26ac4030039890c215803cf420)
+        ;
+
+        
+    
+    
+            var circle_marker_51531fccb88b4d11fc5b054af94b72f2 = L.circleMarker(
+                [27.804151760792106, 84.975077744074],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_2ee4c38b46c6757f58dd69aaf786dccb = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ab020ec1be888ba07779be04a745b46c = $(`<div id="html_ab020ec1be888ba07779be04a745b46c" style="width: 100.0%; height: 100.0%;">     <b>Galchhi</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 12.5 km     </div>`)[0];
+                popup_2ee4c38b46c6757f58dd69aaf786dccb.setContent(html_ab020ec1be888ba07779be04a745b46c);
+            
+        
+
+        circle_marker_51531fccb88b4d11fc5b054af94b72f2.bindPopup(popup_2ee4c38b46c6757f58dd69aaf786dccb)
+        ;
+
+        
+    
+    
+            var circle_marker_24e0871bbacf6026a7c28756c098ba8b = L.circleMarker(
+                [27.805989120389565, 84.9925249634329],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_a3c39f2f2a9a918f6a830897cd08651c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c030236286a5320cd9e8807ecb4f9999 = $(`<div id="html_c030236286a5320cd9e8807ecb4f9999" style="width: 100.0%; height: 100.0%;">     <b>Galchhi</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 15.0 km     </div>`)[0];
+                popup_a3c39f2f2a9a918f6a830897cd08651c.setContent(html_c030236286a5320cd9e8807ecb4f9999);
+            
+        
+
+        circle_marker_24e0871bbacf6026a7c28756c098ba8b.bindPopup(popup_a3c39f2f2a9a918f6a830897cd08651c)
+        ;
+
+        
+    
+    
+            var circle_marker_8ca4eeea290fb4427fd3142554c57cd7 = L.circleMarker(
+                [27.807195912895654, 84.98962092291187],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_911155b97c3bdbc6c208364da95d89ca = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dba30f29fe9f84649d4ed59db6a0e85f = $(`<div id="html_dba30f29fe9f84649d4ed59db6a0e85f" style="width: 100.0%; height: 100.0%;">     <b>Galchhi</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 14.3 km     </div>`)[0];
+                popup_911155b97c3bdbc6c208364da95d89ca.setContent(html_dba30f29fe9f84649d4ed59db6a0e85f);
+            
+        
+
+        circle_marker_8ca4eeea290fb4427fd3142554c57cd7.bindPopup(popup_911155b97c3bdbc6c208364da95d89ca)
+        ;
+
+        
+    
+    
+            var circle_marker_6ef23b3718fb0dd06eae6aa74964a160 = L.circleMarker(
+                [27.80479388403718, 84.96951496884739],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_a1b5aeeda58a22ef998ff0e0fe77819b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0738e5b0dfec71d92c8b29686315648c = $(`<div id="html_0738e5b0dfec71d92c8b29686315648c" style="width: 100.0%; height: 100.0%;">     <b>Galchhi</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 12.1 km     </div>`)[0];
+                popup_a1b5aeeda58a22ef998ff0e0fe77819b.setContent(html_0738e5b0dfec71d92c8b29686315648c);
+            
+        
+
+        circle_marker_6ef23b3718fb0dd06eae6aa74964a160.bindPopup(popup_a1b5aeeda58a22ef998ff0e0fe77819b)
+        ;
+
+        
+    
+    
+            var circle_marker_94a97d3b55aa16d72db020bdbc5815dd = L.circleMarker(
+                [27.806990572339387, 84.97314910686053],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_7a0a415a929ef7da149084df44327030 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c24f5a57c90ca821582e8b5f2368cc08 = $(`<div id="html_c24f5a57c90ca821582e8b5f2368cc08" style="width: 100.0%; height: 100.0%;">     <b>Galchhi</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 12.5 km     </div>`)[0];
+                popup_7a0a415a929ef7da149084df44327030.setContent(html_c24f5a57c90ca821582e8b5f2368cc08);
+            
+        
+
+        circle_marker_94a97d3b55aa16d72db020bdbc5815dd.bindPopup(popup_7a0a415a929ef7da149084df44327030)
+        ;
+
+        
+    
+    
+            var circle_marker_d5917427260fd7b3c9be0ad1e67d6355 = L.circleMarker(
+                [27.799753736850224, 84.93182860753836],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_984d7356543d7a100add0afd54d3d1b1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b174ac7a37842999223fd2a8a7de41b1 = $(`<div id="html_b174ac7a37842999223fd2a8a7de41b1" style="width: 100.0%; height: 100.0%;">     <b>Gajuri</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 6.4 km     </div>`)[0];
+                popup_984d7356543d7a100add0afd54d3d1b1.setContent(html_b174ac7a37842999223fd2a8a7de41b1);
+            
+        
+
+        circle_marker_d5917427260fd7b3c9be0ad1e67d6355.bindPopup(popup_984d7356543d7a100add0afd54d3d1b1)
+        ;
+
+        
+    
+    
+            var circle_marker_4a2719dff422bf9d1d0f10cb9c5cdf88 = L.circleMarker(
+                [27.800162240659752, 84.93294874300669],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_af21c2316ef0e610cf202d00a7877563 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b51c02cf44f664682cb67b7047dadcfa = $(`<div id="html_b51c02cf44f664682cb67b7047dadcfa" style="width: 100.0%; height: 100.0%;">     <b>Gajuri</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 6.7 km     </div>`)[0];
+                popup_af21c2316ef0e610cf202d00a7877563.setContent(html_b51c02cf44f664682cb67b7047dadcfa);
+            
+        
+
+        circle_marker_4a2719dff422bf9d1d0f10cb9c5cdf88.bindPopup(popup_af21c2316ef0e610cf202d00a7877563)
+        ;
+
+        
+    
+    
+            var circle_marker_a2bd5542aef3015e11abb81d5412d5c8 = L.circleMarker(
+                [27.801086394261024, 84.93421530440308],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_38e7c6172bba306dd2ccc1d1cad78df8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7334a5d80a9fc5bebaa469cc930efb67 = $(`<div id="html_7334a5d80a9fc5bebaa469cc930efb67" style="width: 100.0%; height: 100.0%;">     <b>Siddhalek</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 6.6 km     </div>`)[0];
+                popup_38e7c6172bba306dd2ccc1d1cad78df8.setContent(html_7334a5d80a9fc5bebaa469cc930efb67);
+            
+        
+
+        circle_marker_a2bd5542aef3015e11abb81d5412d5c8.bindPopup(popup_38e7c6172bba306dd2ccc1d1cad78df8)
+        ;
+
+        
+    
+    
+            var circle_marker_6ead32c107d0f400bee98a75220dd129 = L.circleMarker(
+                [27.801738979037058, 84.93472343810508],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_41fa792e74f8c02c5665ee3d412e58b6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b95f37e4732506f4a2706f94e178d52c = $(`<div id="html_b95f37e4732506f4a2706f94e178d52c" style="width: 100.0%; height: 100.0%;">     <b>Siddhalek</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 6.8 km     </div>`)[0];
+                popup_41fa792e74f8c02c5665ee3d412e58b6.setContent(html_b95f37e4732506f4a2706f94e178d52c);
+            
+        
+
+        circle_marker_6ead32c107d0f400bee98a75220dd129.bindPopup(popup_41fa792e74f8c02c5665ee3d412e58b6)
+        ;
+
+        
+    
+    
+            var circle_marker_6e7f3a183c5390283b4fb6ec50705589 = L.circleMarker(
+                [27.80225185856417, 84.9342002512196],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_7beb43123f048f8bb78367b44a49b329 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5220112216a64592f0c25126a32a2b88 = $(`<div id="html_5220112216a64592f0c25126a32a2b88" style="width: 100.0%; height: 100.0%;">     <b>Siddhalek</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 7.6 km     </div>`)[0];
+                popup_7beb43123f048f8bb78367b44a49b329.setContent(html_5220112216a64592f0c25126a32a2b88);
+            
+        
+
+        circle_marker_6e7f3a183c5390283b4fb6ec50705589.bindPopup(popup_7beb43123f048f8bb78367b44a49b329)
+        ;
+
+        
+    
+    
+            var circle_marker_bb028b0aa7021440781b6020a5df0ced = L.circleMarker(
+                [27.803819615061258, 84.96949247638209],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_b29cc55b115f9a0af66f9ad1c8f82b06 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_60b42aada3399d5dca778a0230c08214 = $(`<div id="html_60b42aada3399d5dca778a0230c08214" style="width: 100.0%; height: 100.0%;">     <b>Galchhi</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 12.0 km     </div>`)[0];
+                popup_b29cc55b115f9a0af66f9ad1c8f82b06.setContent(html_60b42aada3399d5dca778a0230c08214);
+            
+        
+
+        circle_marker_bb028b0aa7021440781b6020a5df0ced.bindPopup(popup_b29cc55b115f9a0af66f9ad1c8f82b06)
+        ;
+
+        
+    
+    
+            var circle_marker_61180e50423bcc52c41678701a33ac0f = L.circleMarker(
+                [27.803319147508358, 84.9773326069011],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_ec56f5ea831529c38562d8a9878c55fa = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8ed9c864b0dcae4f2434c5c74fe5abd8 = $(`<div id="html_8ed9c864b0dcae4f2434c5c74fe5abd8" style="width: 100.0%; height: 100.0%;">     <b>Galchhi</b><br>     District: Dhading<br>     Status: ISOLATED - no route to any hospital<br>     Nearest hospital: nan<br>     Distance: nan km     </div>`)[0];
+                popup_ec56f5ea831529c38562d8a9878c55fa.setContent(html_8ed9c864b0dcae4f2434c5c74fe5abd8);
+            
+        
+
+        circle_marker_61180e50423bcc52c41678701a33ac0f.bindPopup(popup_ec56f5ea831529c38562d8a9878c55fa)
+        ;
+
+        
+    
+    
+            var circle_marker_d489a6fe9d94b44682fd09adb23a29f5 = L.circleMarker(
+                [27.803356320971183, 84.98133240347677],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_f13c014a97314caa5e33f75c55d875e4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e8b01a29dcd6aaa769ad5837c0761a7b = $(`<div id="html_e8b01a29dcd6aaa769ad5837c0761a7b" style="width: 100.0%; height: 100.0%;">     <b>Galchhi</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 13.2 km     </div>`)[0];
+                popup_f13c014a97314caa5e33f75c55d875e4.setContent(html_e8b01a29dcd6aaa769ad5837c0761a7b);
+            
+        
+
+        circle_marker_d489a6fe9d94b44682fd09adb23a29f5.bindPopup(popup_f13c014a97314caa5e33f75c55d875e4)
+        ;
+
+        
+    
+    
+            var circle_marker_5291bb04f9063f68929c08dfd1c2e8d9 = L.circleMarker(
+                [27.80681847522255, 84.94295395483759],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+        var popup_b61b9a42fef959d051255a5ee14fe7d7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b6c0bb2fc7e3e9500a83ee026a4589e8 = $(`<div id="html_b6c0bb2fc7e3e9500a83ee026a4589e8" style="width: 100.0%; height: 100.0%;">     <b>Adamghat</b><br>     District: Dhading<br>     Status: Reachable<br>     Nearest hospital: hospital<br>     Distance: 7.9 km     </div>`)[0];
+                popup_b61b9a42fef959d051255a5ee14fe7d7.setContent(html_b6c0bb2fc7e3e9500a83ee026a4589e8);
+            
+        
+
+        circle_marker_5291bb04f9063f68929c08dfd1c2e8d9.bindPopup(popup_b61b9a42fef959d051255a5ee14fe7d7)
+        ;
+
+        
+    
+    
+            var marker_76a18fcfbab1f8ef3f23f9df997d4594 = L.marker(
+                [27.8111146, 84.8334747],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_806412ebc5104aa2a2821a072357d575 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e15851fa90a7bef0dc4cce29f4e4504 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3f44894ba1207321b684f7d663fe1e8 = $(`<div id="html_e3f44894ba1207321b684f7d663fe1e8" style="width: 100.0%; height: 100.0%;"><b>Highway Community Hospital</b><br>Type: hospital</div>`)[0];
+                popup_9e15851fa90a7bef0dc4cce29f4e4504.setContent(html_e3f44894ba1207321b684f7d663fe1e8);
+            
+        
+
+        marker_76a18fcfbab1f8ef3f23f9df997d4594.bindPopup(popup_9e15851fa90a7bef0dc4cce29f4e4504)
+        ;
+
+        
+    
+    
+                marker_76a18fcfbab1f8ef3f23f9df997d4594.setIcon(icon_806412ebc5104aa2a2821a072357d575);
+            
+    
+            var marker_1546b9fa92cf55473fbd9cdc8844216c = L.marker(
+                [27.8106241, 84.7800149],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_63db640eb49c1413a671a3bb655754d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77e8df3207346c304509e75af19b06ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7472ff5986af26dea4a098ad4a877605 = $(`<div id="html_7472ff5986af26dea4a098ad4a877605" style="width: 100.0%; height: 100.0%;"><b>Benighat Health Cllinic</b><br>Type: clinic</div>`)[0];
+                popup_77e8df3207346c304509e75af19b06ab.setContent(html_7472ff5986af26dea4a098ad4a877605);
+            
+        
+
+        marker_1546b9fa92cf55473fbd9cdc8844216c.bindPopup(popup_77e8df3207346c304509e75af19b06ab)
+        ;
+
+        
+    
+    
+                marker_1546b9fa92cf55473fbd9cdc8844216c.setIcon(icon_63db640eb49c1413a671a3bb655754d9);
+            
+    
+            var marker_dc1c3f70e7c6c1ebdb400dfb3fedbde8 = L.marker(
+                [27.8136943, 84.8278453],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_b600d531fb46055acbbe6971eaa5a69d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3efd6101196eea6d4977d0249044ff68 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50df51b556fff8af744e093ae962245d = $(`<div id="html_50df51b556fff8af744e093ae962245d" style="width: 100.0%; height: 100.0%;"><b>Highway Healthcare Pharma</b><br>Type: pharmacy</div>`)[0];
+                popup_3efd6101196eea6d4977d0249044ff68.setContent(html_50df51b556fff8af744e093ae962245d);
+            
+        
+
+        marker_dc1c3f70e7c6c1ebdb400dfb3fedbde8.bindPopup(popup_3efd6101196eea6d4977d0249044ff68)
+        ;
+
+        
+    
+    
+                marker_dc1c3f70e7c6c1ebdb400dfb3fedbde8.setIcon(icon_b600d531fb46055acbbe6971eaa5a69d);
+            
+    
+            var marker_8875105a0e0825dc75d9c84b50243cf1 = L.marker(
+                [27.8056745, 84.7043051],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_8e853ca0137fa5f27916f109c077a69c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ebe4bae112b37b2dac7e5cd3fd47677f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e537980fa3851db5c3b82ef928cf4732 = $(`<div id="html_e537980fa3851db5c3b82ef928cf4732" style="width: 100.0%; height: 100.0%;"><b>Bihani Pharmacy</b><br>Type: pharmacy</div>`)[0];
+                popup_ebe4bae112b37b2dac7e5cd3fd47677f.setContent(html_e537980fa3851db5c3b82ef928cf4732);
+            
+        
+
+        marker_8875105a0e0825dc75d9c84b50243cf1.bindPopup(popup_ebe4bae112b37b2dac7e5cd3fd47677f)
+        ;
+
+        
+    
+    
+                marker_8875105a0e0825dc75d9c84b50243cf1.setIcon(icon_8e853ca0137fa5f27916f109c077a69c);
+            
+    
+            var marker_e6a58149985d55a3a8aab09ae4528766 = L.marker(
+                [27.806438818970182, 84.88002938397682],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_aa1bca5bae019044b58fd47c71fbb5b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c44fac2adf515241eb62be9bdce1dd33 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b80bf2ba1e3d607d3c39525fd97d6b6 = $(`<div id="html_7b80bf2ba1e3d607d3c39525fd97d6b6" style="width: 100.0%; height: 100.0%;"><b>hospital</b><br>Type: hospital</div>`)[0];
+                popup_c44fac2adf515241eb62be9bdce1dd33.setContent(html_7b80bf2ba1e3d607d3c39525fd97d6b6);
+            
+        
+
+        marker_e6a58149985d55a3a8aab09ae4528766.bindPopup(popup_c44fac2adf515241eb62be9bdce1dd33)
+        ;
+
+        
+    
+    
+                marker_e6a58149985d55a3a8aab09ae4528766.setIcon(icon_aa1bca5bae019044b58fd47c71fbb5b2);
+            
+    
+            var marker_0a8b268a2b10ca60cd8f765379e4e687 = L.marker(
+                [28.2789444, 85.3780972],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_25f5b3d08bbe3e7162abed80550d34a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_921a0a2573810370e84ff63475a01bfa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_994b0d3bada465f0763f827519a79c69 = $(`<div id="html_994b0d3bada465f0763f827519a79c69" style="width: 100.0%; height: 100.0%;"><b>Miteri Bridge, Rasuwagadhi</b><br>Status: Washed out</div>`)[0];
+                popup_921a0a2573810370e84ff63475a01bfa.setContent(html_994b0d3bada465f0763f827519a79c69);
+            
+        
+
+        marker_0a8b268a2b10ca60cd8f765379e4e687.bindPopup(popup_921a0a2573810370e84ff63475a01bfa)
+        ;
+
+        
+    
+    
+                marker_0a8b268a2b10ca60cd8f765379e4e687.setIcon(icon_25f5b3d08bbe3e7162abed80550d34a3);
+            
+    
+            var marker_e9fe86d0e2e5d75777cd5b727cc280ab = L.marker(
+                [28.271275, 85.3776972],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_0e84c6da9738ab2030909b4108b118dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_71ef8fdc9a10c332ed91a2eb3af4022d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a54c9c65c52d1403d340880f86c40021 = $(`<div id="html_a54c9c65c52d1403d340880f86c40021" style="width: 100.0%; height: 100.0%;"><b>Timure Bridge 1</b><br>Status: Washed out</div>`)[0];
+                popup_71ef8fdc9a10c332ed91a2eb3af4022d.setContent(html_a54c9c65c52d1403d340880f86c40021);
+            
+        
+
+        marker_e9fe86d0e2e5d75777cd5b727cc280ab.bindPopup(popup_71ef8fdc9a10c332ed91a2eb3af4022d)
+        ;
+
+        
+    
+    
+                marker_e9fe86d0e2e5d75777cd5b727cc280ab.setIcon(icon_0e84c6da9738ab2030909b4108b118dd);
+            
+    
+            var marker_31637bbf6be0240cf8a6e87a2d75609b = L.marker(
+                [28.2399778, 85.3582778],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_efa67c5c69c3980b679e7f502efd1d1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_639380e4c58821de32e4a9c3b55db80b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a88d336bfb9c811e6de6e2909d7c3789 = $(`<div id="html_a88d336bfb9c811e6de6e2909d7c3789" style="width: 100.0%; height: 100.0%;"><b>Timure Bridge 2</b><br>Status: Washed out</div>`)[0];
+                popup_639380e4c58821de32e4a9c3b55db80b.setContent(html_a88d336bfb9c811e6de6e2909d7c3789);
+            
+        
+
+        marker_31637bbf6be0240cf8a6e87a2d75609b.bindPopup(popup_639380e4c58821de32e4a9c3b55db80b)
+        ;
+
+        
+    
+    
+                marker_31637bbf6be0240cf8a6e87a2d75609b.setIcon(icon_efa67c5c69c3980b679e7f502efd1d1c);
+            
+    
+            var marker_7eb8361b9a17ca6fc2a890eadc89215c = L.marker(
+                [28.2267111, 85.3618028],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_7323da90a9e98e62148f1fa27ea453ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0bc2fabaa89a6467e305ac8530a4a21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9931661ee7d8cd8eb629980255bda22c = $(`<div id="html_9931661ee7d8cd8eb629980255bda22c" style="width: 100.0%; height: 100.0%;"><b>Ghatte Khola</b><br>Status: Washed out</div>`)[0];
+                popup_f0bc2fabaa89a6467e305ac8530a4a21.setContent(html_9931661ee7d8cd8eb629980255bda22c);
+            
+        
+
+        marker_7eb8361b9a17ca6fc2a890eadc89215c.bindPopup(popup_f0bc2fabaa89a6467e305ac8530a4a21)
+        ;
+
+        
+    
+    
+                marker_7eb8361b9a17ca6fc2a890eadc89215c.setIcon(icon_7323da90a9e98e62148f1fa27ea453ef);
+            
+    
+            var marker_e759853972faa42b72933071618b7948 = L.marker(
+                [28.1828028, 85.3432806],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_37546d60b52aaab66edfea2a90f0d90e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9058712e2955cafeedd6b86449ab3b4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e4802db589f7cd553911523938e1703 = $(`<div id="html_1e4802db589f7cd553911523938e1703" style="width: 100.0%; height: 100.0%;"><b>Bhotekoshi Bridge at Chilime</b><br>Status: Washed out</div>`)[0];
+                popup_9058712e2955cafeedd6b86449ab3b4b.setContent(html_1e4802db589f7cd553911523938e1703);
+            
+        
+
+        marker_e759853972faa42b72933071618b7948.bindPopup(popup_9058712e2955cafeedd6b86449ab3b4b)
+        ;
+
+        
+    
+    
+                marker_e759853972faa42b72933071618b7948.setIcon(icon_37546d60b52aaab66edfea2a90f0d90e);
+            
+    
+            var marker_936f6683f1ef2ee9f2f5f7f77cd91b9f = L.marker(
+                [28.1816528, 85.3422194],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_047ab341d52573ab5db7cb9d13088891 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_525ed5d3600cb30ab030691155cff85a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa5f55f0087a9262fba4696af92b9e00 = $(`<div id="html_aa5f55f0087a9262fba4696af92b9e00" style="width: 100.0%; height: 100.0%;"><b>Chilime Bridge, Chilime Khola</b><br>Status: Washed out</div>`)[0];
+                popup_525ed5d3600cb30ab030691155cff85a.setContent(html_aa5f55f0087a9262fba4696af92b9e00);
+            
+        
+
+        marker_936f6683f1ef2ee9f2f5f7f77cd91b9f.bindPopup(popup_525ed5d3600cb30ab030691155cff85a)
+        ;
+
+        
+    
+    
+                marker_936f6683f1ef2ee9f2f5f7f77cd91b9f.setIcon(icon_047ab341d52573ab5db7cb9d13088891);
+            
+    
+            var marker_30f7cdc95480fcf38b14546d21e9ade5 = L.marker(
+                [28.1643861, 85.3399278],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_33febc3d9fead6a174190ad899157e42 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b4e6a61bcb946fda7c668f92ac483a84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b9c89f5a7e71e8124508c099ec6c2c6 = $(`<div id="html_3b9c89f5a7e71e8124508c099ec6c2c6" style="width: 100.0%; height: 100.0%;"><b>Hydropower Bailey Bridge at Bhotekoshi, Syaphrubeshi</b><br>Status: Washed out</div>`)[0];
+                popup_b4e6a61bcb946fda7c668f92ac483a84.setContent(html_3b9c89f5a7e71e8124508c099ec6c2c6);
+            
+        
+
+        marker_30f7cdc95480fcf38b14546d21e9ade5.bindPopup(popup_b4e6a61bcb946fda7c668f92ac483a84)
+        ;
+
+        
+    
+    
+                marker_30f7cdc95480fcf38b14546d21e9ade5.setIcon(icon_33febc3d9fead6a174190ad899157e42);
+            
+    
+            var marker_5b704950bb6582422dc9bb4ed4e92e80 = L.marker(
+                [28.1574778, 85.3324917],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_91b3f63aa65e07afdc7505d9a44a7dc7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64c28ef64a87c805af215c5bf340de6e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b3c78e53e7216c771499f756d3cb9f9 = $(`<div id="html_2b3c78e53e7216c771499f756d3cb9f9" style="width: 100.0%; height: 100.0%;"><b>Syafrubesi Bridge</b><br>Status: Washed out</div>`)[0];
+                popup_64c28ef64a87c805af215c5bf340de6e.setContent(html_2b3c78e53e7216c771499f756d3cb9f9);
+            
+        
+
+        marker_5b704950bb6582422dc9bb4ed4e92e80.bindPopup(popup_64c28ef64a87c805af215c5bf340de6e)
+        ;
+
+        
+    
+    
+                marker_5b704950bb6582422dc9bb4ed4e92e80.setIcon(icon_91b3f63aa65e07afdc7505d9a44a7dc7);
+            
+    
+            var marker_3914eee75fded6d383a94b2a3fee0a37 = L.marker(
+                [28.1202833, 85.2884222],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_1be9697a562a5eb230210ea90e4eca7a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eccfe4b5b4a0ba1e6c57f1c2c89a5e91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66a95b005ae615c56c334505ac0ea232 = $(`<div id="html_66a95b005ae615c56c334505ac0ea232" style="width: 100.0%; height: 100.0%;"><b>Trisuli 216 Audit 1 Bailey Bridge</b><br>Status: Washed out</div>`)[0];
+                popup_eccfe4b5b4a0ba1e6c57f1c2c89a5e91.setContent(html_66a95b005ae615c56c334505ac0ea232);
+            
+        
+
+        marker_3914eee75fded6d383a94b2a3fee0a37.bindPopup(popup_eccfe4b5b4a0ba1e6c57f1c2c89a5e91)
+        ;
+
+        
+    
+    
+                marker_3914eee75fded6d383a94b2a3fee0a37.setIcon(icon_1be9697a562a5eb230210ea90e4eca7a);
+            
+    
+            var marker_8122c608f584984eee52769685f23c1e = L.marker(
+                [28.1129528, 85.2810306],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_71f614f810280cbb9fc2c22bc1e07dab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1364149b746698aa095e1bac3ada7b9a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_229145a37a1b92046c4c19f51a02f4a3 = $(`<div id="html_229145a37a1b92046c4c19f51a02f4a3" style="width: 100.0%; height: 100.0%;"><b>Haku1 Bailey Bridge at Hydropower, Trishuli</b><br>Status: Washed out</div>`)[0];
+                popup_1364149b746698aa095e1bac3ada7b9a.setContent(html_229145a37a1b92046c4c19f51a02f4a3);
+            
+        
+
+        marker_8122c608f584984eee52769685f23c1e.bindPopup(popup_1364149b746698aa095e1bac3ada7b9a)
+        ;
+
+        
+    
+    
+                marker_8122c608f584984eee52769685f23c1e.setIcon(icon_71f614f810280cbb9fc2c22bc1e07dab);
+            
+    
+            var marker_56040db369ad5c851219163e476103ca = L.marker(
+                [28.1101556, 85.2789639],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_dbb9ad12f0132cbe4c5ff28cfab85e4c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_69aec7ce16738e194d96a227f6213587 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f5575e7e8c6b6f0158f0bb3af4af7855 = $(`<div id="html_f5575e7e8c6b6f0158f0bb3af4af7855" style="width: 100.0%; height: 100.0%;"><b>Haku khola</b><br>Status: Washed out</div>`)[0];
+                popup_69aec7ce16738e194d96a227f6213587.setContent(html_f5575e7e8c6b6f0158f0bb3af4af7855);
+            
+        
+
+        marker_56040db369ad5c851219163e476103ca.bindPopup(popup_69aec7ce16738e194d96a227f6213587)
+        ;
+
+        
+    
+    
+                marker_56040db369ad5c851219163e476103ca.setIcon(icon_dbb9ad12f0132cbe4c5ff28cfab85e4c);
+            
+    
+            var marker_dc6253ecebd0773b079cc297854f06be = L.marker(
+                [28.1085417, 85.2771472],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_175dd148a037920c03db06f5ff5f244d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01c26e2fffe76158e255a0a50621f4a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69dd9510e1d2a676373f620837b59888 = $(`<div id="html_69dd9510e1d2a676373f620837b59888" style="width: 100.0%; height: 100.0%;"><b>Bimali Khola</b><br>Status: Washed out</div>`)[0];
+                popup_01c26e2fffe76158e255a0a50621f4a3.setContent(html_69dd9510e1d2a676373f620837b59888);
+            
+        
+
+        marker_dc6253ecebd0773b079cc297854f06be.bindPopup(popup_01c26e2fffe76158e255a0a50621f4a3)
+        ;
+
+        
+    
+    
+                marker_dc6253ecebd0773b079cc297854f06be.setIcon(icon_175dd148a037920c03db06f5ff5f244d);
+            
+    
+            var marker_17813286bb3e89cbd7eac3cb7d47ef73 = L.marker(
+                [28.1083667, 85.2751389],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_9ef0b1b4b422960dd59f9152b62fb40d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a231222512bfec4858eca9487b1ae25b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_082507046593a614dbae7a9a713611b7 = $(`<div id="html_082507046593a614dbae7a9a713611b7" style="width: 100.0%; height: 100.0%;"><b>Haku2 Bailey Bridge at Hydropower, Trishuli</b><br>Status: Washed out</div>`)[0];
+                popup_a231222512bfec4858eca9487b1ae25b.setContent(html_082507046593a614dbae7a9a713611b7);
+            
+        
+
+        marker_17813286bb3e89cbd7eac3cb7d47ef73.bindPopup(popup_a231222512bfec4858eca9487b1ae25b)
+        ;
+
+        
+    
+    
+                marker_17813286bb3e89cbd7eac3cb7d47ef73.setIcon(icon_9ef0b1b4b422960dd59f9152b62fb40d);
+            
+    
+            var marker_8778fbc34da6229850f5bbe4b2d1f73a = L.marker(
+                [28.0818972, 85.2225944],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_45ada81860d5d65c49e64aa519c598b2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_55aa2d5afe2f475dce4ae31e56a3a51b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3393bc7577d6d531e40bc705044a6695 = $(`<div id="html_3393bc7577d6d531e40bc705044a6695" style="width: 100.0%; height: 100.0%;"><b>Crossing 0+700</b><br>Status: Washed out</div>`)[0];
+                popup_55aa2d5afe2f475dce4ae31e56a3a51b.setContent(html_3393bc7577d6d531e40bc705044a6695);
+            
+        
+
+        marker_8778fbc34da6229850f5bbe4b2d1f73a.bindPopup(popup_55aa2d5afe2f475dce4ae31e56a3a51b)
+        ;
+
+        
+    
+    
+                marker_8778fbc34da6229850f5bbe4b2d1f73a.setIcon(icon_45ada81860d5d65c49e64aa519c598b2);
+            
+    
+            var marker_f42c74e66badcbe8522a60daf7a7b69e = L.marker(
+                [28.0759778, 85.2128444],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_57c4c12f0dc3d46a429f1de9bb43094e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c657087e7403aa3775476a3b7789f9e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f81a94a94c352016f167c2768d79237a = $(`<div id="html_f81a94a94c352016f167c2768d79237a" style="width: 100.0%; height: 100.0%;"><b>Upper Trishuli Hydrower Bailey Bridge</b><br>Status: Washed out</div>`)[0];
+                popup_c657087e7403aa3775476a3b7789f9e1.setContent(html_f81a94a94c352016f167c2768d79237a);
+            
+        
+
+        marker_f42c74e66badcbe8522a60daf7a7b69e.bindPopup(popup_c657087e7403aa3775476a3b7789f9e1)
+        ;
+
+        
+    
+    
+                marker_f42c74e66badcbe8522a60daf7a7b69e.setIcon(icon_57c4c12f0dc3d46a429f1de9bb43094e);
+            
+    
+            var marker_0722f3c4101472c02b03c5a979436a32 = L.marker(
+                [28.0718944, 85.2075333],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_55a4267a394387ad82602273f0e2176b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_443d711fa22460f6bf822e92b52327a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b6fc37854389ebd46c26939797d29c7 = $(`<div id="html_2b6fc37854389ebd46c26939797d29c7" style="width: 100.0%; height: 100.0%;"><b>Mailung Bailey Bridge at Mailung Bazaar</b><br>Status: Washed out</div>`)[0];
+                popup_443d711fa22460f6bf822e92b52327a5.setContent(html_2b6fc37854389ebd46c26939797d29c7);
+            
+        
+
+        marker_0722f3c4101472c02b03c5a979436a32.bindPopup(popup_443d711fa22460f6bf822e92b52327a5)
+        ;
+
+        
+    
+    
+                marker_0722f3c4101472c02b03c5a979436a32.setIcon(icon_55a4267a394387ad82602273f0e2176b);
+            
+    
+            var marker_950a5ab78da7f6353f6afcd25f40863c = L.marker(
+                [28.0652778, 85.2058333],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_b985bb92f317bf6ee0183289d029a954 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6e57dce73e4714c48bfaf5190a45f574 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61c045b146b48422ac2d138c51deafa5 = $(`<div id="html_61c045b146b48422ac2d138c51deafa5" style="width: 100.0%; height: 100.0%;"><b>Trishuli Bridge Mailung Chipleti</b><br>Status: Washed out</div>`)[0];
+                popup_6e57dce73e4714c48bfaf5190a45f574.setContent(html_61c045b146b48422ac2d138c51deafa5);
+            
+        
+
+        marker_950a5ab78da7f6353f6afcd25f40863c.bindPopup(popup_6e57dce73e4714c48bfaf5190a45f574)
+        ;
+
+        
+    
+    
+                marker_950a5ab78da7f6353f6afcd25f40863c.setIcon(icon_b985bb92f317bf6ee0183289d029a954);
+            
+    
+            var marker_e2de9afba9b2fc238e67cc0dcb7427a2 = L.marker(
+                [28.0625778, 85.206325],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_1dc0d4cb2b456299d4c099aa0ef8aed2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad082f5637c4137a1c08834c734c4f10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b411f4c61fdeab8940421efbdec294c0 = $(`<div id="html_b411f4c61fdeab8940421efbdec294c0" style="width: 100.0%; height: 100.0%;"><b>Trishuli 3A Dam-3</b><br>Status: Washed out</div>`)[0];
+                popup_ad082f5637c4137a1c08834c734c4f10.setContent(html_b411f4c61fdeab8940421efbdec294c0);
+            
+        
+
+        marker_e2de9afba9b2fc238e67cc0dcb7427a2.bindPopup(popup_ad082f5637c4137a1c08834c734c4f10)
+        ;
+
+        
+    
+    
+                marker_e2de9afba9b2fc238e67cc0dcb7427a2.setIcon(icon_1dc0d4cb2b456299d4c099aa0ef8aed2);
+            
+    
+            var marker_7288edab709f980886793446303ea1a4 = L.marker(
+                [28.0620528, 85.2066861],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_f3b71fda13444dc56e42d036c47e1021 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b004d0d179116776fa5d8230c67e9dec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c5d4a3d622c852b99a1c7a64817318e = $(`<div id="html_5c5d4a3d622c852b99a1c7a64817318e" style="width: 100.0%; height: 100.0%;"><b>Trishuli 3A Dam-2</b><br>Status: Washed out</div>`)[0];
+                popup_b004d0d179116776fa5d8230c67e9dec.setContent(html_5c5d4a3d622c852b99a1c7a64817318e);
+            
+        
+
+        marker_7288edab709f980886793446303ea1a4.bindPopup(popup_b004d0d179116776fa5d8230c67e9dec)
+        ;
+
+        
+    
+    
+                marker_7288edab709f980886793446303ea1a4.setIcon(icon_f3b71fda13444dc56e42d036c47e1021);
+            
+    
+            var marker_14c7d930e11c9d4dbbafe76b71c707b0 = L.marker(
+                [28.0380556, 85.1927778],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_4b85691b022ab471ba56457cbcd8e122 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c585694716e23f2bfe759519d5464cc4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0452a45d2d82d4446dcf890191f55588 = $(`<div id="html_0452a45d2d82d4446dcf890191f55588" style="width: 100.0%; height: 100.0%;"><b>Bahubali Jharana Pul</b><br>Status: Washed out</div>`)[0];
+                popup_c585694716e23f2bfe759519d5464cc4.setContent(html_0452a45d2d82d4446dcf890191f55588);
+            
+        
+
+        marker_14c7d930e11c9d4dbbafe76b71c707b0.bindPopup(popup_c585694716e23f2bfe759519d5464cc4)
+        ;
+
+        
+    
+    
+                marker_14c7d930e11c9d4dbbafe76b71c707b0.setIcon(icon_4b85691b022ab471ba56457cbcd8e122);
+            
+    
+            var marker_29f1d0e93c4043ae050654c6ba00f735 = L.marker(
+                [27.9953417, 85.1848889],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_0d6a8215a373a8407bd0bc640976b520 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_73652e0a073af8784c05bf3f6fa50a51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd70f99d568ca3581d287bbf2c7ceb2d = $(`<div id="html_dd70f99d568ca3581d287bbf2c7ceb2d" style="width: 100.0%; height: 100.0%;"><b>Naya Pul Trishuli, Khalte CH 37+810</b><br>Status: Washed out</div>`)[0];
+                popup_73652e0a073af8784c05bf3f6fa50a51.setContent(html_dd70f99d568ca3581d287bbf2c7ceb2d);
+            
+        
+
+        marker_29f1d0e93c4043ae050654c6ba00f735.bindPopup(popup_73652e0a073af8784c05bf3f6fa50a51)
+        ;
+
+        
+    
+    
+                marker_29f1d0e93c4043ae050654c6ba00f735.setIcon(icon_0d6a8215a373a8407bd0bc640976b520);
+            
+    
+            var marker_ebe93af18325dc79bffb9dc676bf2f5b = L.marker(
+                [27.9743389, 85.1858111],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_7302e24acffe2e2a315432d4287f0e44 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e72b0134b55ac5d87d675d1235221c03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9cb71e5d52050a6e93e2f358db56d1a = $(`<div id="html_f9cb71e5d52050a6e93e2f358db56d1a" style="width: 100.0%; height: 100.0%;"><b>Betrawati Old Bridge</b><br>Status: Washed out</div>`)[0];
+                popup_e72b0134b55ac5d87d675d1235221c03.setContent(html_f9cb71e5d52050a6e93e2f358db56d1a);
+            
+        
+
+        marker_ebe93af18325dc79bffb9dc676bf2f5b.bindPopup(popup_e72b0134b55ac5d87d675d1235221c03)
+        ;
+
+        
+    
+    
+                marker_ebe93af18325dc79bffb9dc676bf2f5b.setIcon(icon_7302e24acffe2e2a315432d4287f0e44);
+            
+    
+            var marker_05b78c3e3bcca19dfca517d7eb321c9f = L.marker(
+                [27.9743389, 85.1858111],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_c6b06b7fb17c089c5cbf86af50596f56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6cae5dbaf9acb024a73c1b998417e6c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_478a77fbe1268a0d4252c63989c34dbf = $(`<div id="html_478a77fbe1268a0d4252c63989c34dbf" style="width: 100.0%; height: 100.0%;"><b>Betrawati New Bridge</b><br>Status: Washed out</div>`)[0];
+                popup_6cae5dbaf9acb024a73c1b998417e6c2.setContent(html_478a77fbe1268a0d4252c63989c34dbf);
+            
+        
+
+        marker_05b78c3e3bcca19dfca517d7eb321c9f.bindPopup(popup_6cae5dbaf9acb024a73c1b998417e6c2)
+        ;
+
+        
+    
+    
+                marker_05b78c3e3bcca19dfca517d7eb321c9f.setIcon(icon_c6b06b7fb17c089c5cbf86af50596f56);
+            
+    
+            var marker_534151a3d9d921058e8cb4ccdad54cb3 = L.marker(
+                [27.9637778, 85.1728111],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_ff1ec366e035c1131e26572433a6389c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89c5d0de16b905ed6649b35f170b17df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_604d659a3e52016d86500e7082a216c7 = $(`<div id="html_604d659a3e52016d86500e7082a216c7" style="width: 100.0%; height: 100.0%;"><b>Trisuli River Bridge Tupche</b><br>Status: Washed out</div>`)[0];
+                popup_89c5d0de16b905ed6649b35f170b17df.setContent(html_604d659a3e52016d86500e7082a216c7);
+            
+        
+
+        marker_534151a3d9d921058e8cb4ccdad54cb3.bindPopup(popup_89c5d0de16b905ed6649b35f170b17df)
+        ;
+
+        
+    
+    
+                marker_534151a3d9d921058e8cb4ccdad54cb3.setIcon(icon_ff1ec366e035c1131e26572433a6389c);
+            
+    
+            var marker_cbf99387c5601a7113c8be875df40055 = L.marker(
+                [27.9218278, 85.14945],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_47923d1441a4ed5c4a16c6626bcceed4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25c72c5348293551399c87acc2e01666 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78311a258b40654b6d03feb9e5de073e = $(`<div id="html_78311a258b40654b6d03feb9e5de073e" style="width: 100.0%; height: 100.0%;"><b>Trisuli River Bridge ,Trisuli Bazzar(Old)</b><br>Status: Washed out</div>`)[0];
+                popup_25c72c5348293551399c87acc2e01666.setContent(html_78311a258b40654b6d03feb9e5de073e);
+            
+        
+
+        marker_cbf99387c5601a7113c8be875df40055.bindPopup(popup_25c72c5348293551399c87acc2e01666)
+        ;
+
+        
+    
+    
+                marker_cbf99387c5601a7113c8be875df40055.setIcon(icon_47923d1441a4ed5c4a16c6626bcceed4);
+            
+    
+            var marker_036ca0c2a5dacfd5b1fd603fd26b7cba = L.marker(
+                [27.9212361, 85.1479639],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_d415d0ab8460a32678ed157239173c2f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_017ff1e897f03069d80fb64424b841f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46ef7807736fc22c65b5d28a502be2a7 = $(`<div id="html_46ef7807736fc22c65b5d28a502be2a7" style="width: 100.0%; height: 100.0%;"><b>Trisuli River Bridge ,Trisuli Bazzar(New)</b><br>Status: Washed out</div>`)[0];
+                popup_017ff1e897f03069d80fb64424b841f1.setContent(html_46ef7807736fc22c65b5d28a502be2a7);
+            
+        
+
+        marker_036ca0c2a5dacfd5b1fd603fd26b7cba.bindPopup(popup_017ff1e897f03069d80fb64424b841f1)
+        ;
+
+        
+    
+    
+                marker_036ca0c2a5dacfd5b1fd603fd26b7cba.setIcon(icon_d415d0ab8460a32678ed157239173c2f);
+            
+    
+            var marker_7cc160ec83c3cbf6f4ecd50d852813a5 = L.marker(
+                [27.9094861, 85.1385028],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_7d6df58d86e30ed72ee075a81843f577 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e804d98987b004054db3676f8ba72f5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2646c3c8dd3092e2c5550b21f27bc1ee = $(`<div id="html_2646c3c8dd3092e2c5550b21f27bc1ee" style="width: 100.0%; height: 100.0%;"><b>Trisuli River Bridge ,Simchaur</b><br>Status: Washed out</div>`)[0];
+                popup_e804d98987b004054db3676f8ba72f5c.setContent(html_2646c3c8dd3092e2c5550b21f27bc1ee);
+            
+        
+
+        marker_7cc160ec83c3cbf6f4ecd50d852813a5.bindPopup(popup_e804d98987b004054db3676f8ba72f5c)
+        ;
+
+        
+    
+    
+                marker_7cc160ec83c3cbf6f4ecd50d852813a5.setIcon(icon_7d6df58d86e30ed72ee075a81843f577);
+            
+    
+            var marker_1e53ce9fc5f025fd7a1204413af957e1 = L.marker(
+                [27.8923417, 85.1365],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_303ae0998dffa0bdb39f90d1df975349 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_48dc79f50ceb26eae60fb7e98247e46d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e839d3d8ee44b03573cb588a3a324241 = $(`<div id="html_e839d3d8ee44b03573cb588a3a324241" style="width: 100.0%; height: 100.0%;"><b>Suspension Bridge at Devighat near Jalshrot tatha Sinchai Division</b><br>Status: Washed out</div>`)[0];
+                popup_48dc79f50ceb26eae60fb7e98247e46d.setContent(html_e839d3d8ee44b03573cb588a3a324241);
+            
+        
+
+        marker_1e53ce9fc5f025fd7a1204413af957e1.bindPopup(popup_48dc79f50ceb26eae60fb7e98247e46d)
+        ;
+
+        
+    
+    
+                marker_1e53ce9fc5f025fd7a1204413af957e1.setIcon(icon_303ae0998dffa0bdb39f90d1df975349);
+            
+    
+            var marker_f1fef17f1a3b3175a8ac0fe35733428b = L.marker(
+                [27.8703389, 85.116225],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_8faa91dec6a2615719dbd24a8e957a7a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b8c8f7e3240e53a4657a5fe9ab1d6e63 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07aed458db31e6215496799668e52005 = $(`<div id="html_07aed458db31e6215496799668e52005" style="width: 100.0%; height: 100.0%;"><b>Trisuli River Bridge, Near Devighat, Midhill Highway</b><br>Status: Washed out</div>`)[0];
+                popup_b8c8f7e3240e53a4657a5fe9ab1d6e63.setContent(html_07aed458db31e6215496799668e52005);
+            
+        
+
+        marker_f1fef17f1a3b3175a8ac0fe35733428b.bindPopup(popup_b8c8f7e3240e53a4657a5fe9ab1d6e63)
+        ;
+
+        
+    
+    
+                marker_f1fef17f1a3b3175a8ac0fe35733428b.setIcon(icon_8faa91dec6a2615719dbd24a8e957a7a);
+            
+    
+            var marker_2c7c3a56392ace42c334f654ada5a77c = L.marker(
+                [27.858575, 85.109075],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_a3f3cd0bb0f6c1329bf61a30a465e6aa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_731f12b5a4baf363d10d7f2119efaf8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_301399accd45f3f0a94de2d9b84177b1 = $(`<div id="html_301399accd45f3f0a94de2d9b84177b1" style="width: 100.0%; height: 100.0%;"><b>Tandi Khola Bridge, Devighat (Old)</b><br>Status: Washed out</div>`)[0];
+                popup_731f12b5a4baf363d10d7f2119efaf8f.setContent(html_301399accd45f3f0a94de2d9b84177b1);
+            
+        
+
+        marker_2c7c3a56392ace42c334f654ada5a77c.bindPopup(popup_731f12b5a4baf363d10d7f2119efaf8f)
+        ;
+
+        
+    
+    
+                marker_2c7c3a56392ace42c334f654ada5a77c.setIcon(icon_a3f3cd0bb0f6c1329bf61a30a465e6aa);
+            
+    
+            var marker_e292f3e381b4dd943acce01e8f2dd0fe = L.marker(
+                [27.858575, 85.109075],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_0201354c2135f87eba493048811116cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_55ba83a542e52971388357176baa1a36 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4d93cd618ee87e5240baa8758245524 = $(`<div id="html_c4d93cd618ee87e5240baa8758245524" style="width: 100.0%; height: 100.0%;"><b>Tandi Khola Bridge, Devighat (New)</b><br>Status: Washed out</div>`)[0];
+                popup_55ba83a542e52971388357176baa1a36.setContent(html_c4d93cd618ee87e5240baa8758245524);
+            
+        
+
+        marker_e292f3e381b4dd943acce01e8f2dd0fe.bindPopup(popup_55ba83a542e52971388357176baa1a36)
+        ;
+
+        
+    
+    
+                marker_e292f3e381b4dd943acce01e8f2dd0fe.setIcon(icon_0201354c2135f87eba493048811116cb);
+            
+    
+            var marker_e87504a11c56462d67180b852fbe3436 = L.marker(
+                [27.8593167, 85.0987083],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_9a7eebc26e744fce803c24512f1f0284 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_483715455772c15b8b06c90818083c9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f6954473a76fba1e378246196a281cf6 = $(`<div id="html_f6954473a76fba1e378246196a281cf6" style="width: 100.0%; height: 100.0%;"><b>Trisuli River Bridge,Khadgabhanjyang Srikhali Sadak</b><br>Status: Washed out</div>`)[0];
+                popup_483715455772c15b8b06c90818083c9f.setContent(html_f6954473a76fba1e378246196a281cf6);
+            
+        
+
+        marker_e87504a11c56462d67180b852fbe3436.bindPopup(popup_483715455772c15b8b06c90818083c9f)
+        ;
+
+        
+    
+    
+                marker_e87504a11c56462d67180b852fbe3436.setIcon(icon_9a7eebc26e744fce803c24512f1f0284);
+            
+    
+            var marker_c6735c465bc28a7231091416c73f928f = L.marker(
+                [27.8594806, 85.0619361],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_a558eb9a2ea2bcb75aa7c5422b45380a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7b34d121d53e775e12cc531ea662be4a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4b31bf55aff10fd05f81602c26bbe277 = $(`<div id="html_4b31bf55aff10fd05f81602c26bbe277" style="width: 100.0%; height: 100.0%;"><b>Trishuli River Bridge, Buddhasinghghat</b><br>Status: Washed out</div>`)[0];
+                popup_7b34d121d53e775e12cc531ea662be4a.setContent(html_4b31bf55aff10fd05f81602c26bbe277);
+            
+        
+
+        marker_c6735c465bc28a7231091416c73f928f.bindPopup(popup_7b34d121d53e775e12cc531ea662be4a)
+        ;
+
+        
+    
+    
+                marker_c6735c465bc28a7231091416c73f928f.setIcon(icon_a558eb9a2ea2bcb75aa7c5422b45380a);
+            
+    
+            var marker_e893e139b61d3358ee4500d9eb983e39 = L.marker(
+                [27.8560972, 85.0411889],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_f307f29440a3dd3bc42081769b91a528 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b49f03d4388d7928925744c0e270878 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_328fcadeea248cda46227a94e5a88534 = $(`<div id="html_328fcadeea248cda46227a94e5a88534" style="width: 100.0%; height: 100.0%;"><b>Trishuli River Bridge, Ratmate</b><br>Status: Washed out</div>`)[0];
+                popup_8b49f03d4388d7928925744c0e270878.setContent(html_328fcadeea248cda46227a94e5a88534);
+            
+        
+
+        marker_e893e139b61d3358ee4500d9eb983e39.bindPopup(popup_8b49f03d4388d7928925744c0e270878)
+        ;
+
+        
+    
+    
+                marker_e893e139b61d3358ee4500d9eb983e39.setIcon(icon_f307f29440a3dd3bc42081769b91a528);
+            
+    
+            var marker_45ae925e2912921f5628d9b80cf1bd18 = L.marker(
+                [27.832525, 85.0223333],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_d9cc26de96658524e9ba61595446fc5d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_648d224a31d593e895b0e333498f12d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd4beb3ddd2f41405d0335f88cdc91bb = $(`<div id="html_fd4beb3ddd2f41405d0335f88cdc91bb" style="width: 100.0%; height: 100.0%;"><b>Trishuli River Bridge, Keurini, Fosretar</b><br>Status: Washed out</div>`)[0];
+                popup_648d224a31d593e895b0e333498f12d6.setContent(html_fd4beb3ddd2f41405d0335f88cdc91bb);
+            
+        
+
+        marker_45ae925e2912921f5628d9b80cf1bd18.bindPopup(popup_648d224a31d593e895b0e333498f12d6)
+        ;
+
+        
+    
+    
+                marker_45ae925e2912921f5628d9b80cf1bd18.setIcon(icon_d9cc26de96658524e9ba61595446fc5d);
+            
+    
+            var marker_413835996216bcf390712221a65457fb = L.marker(
+                [27.8042833, 84.9904889],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_6affb086e58fe1a8c756924527660e5a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0356aec074bdf9117f482b84591fd0ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2a6a0476b709ab09a931707dd525aa6 = $(`<div id="html_f2a6a0476b709ab09a931707dd525aa6" style="width: 100.0%; height: 100.0%;"><b>Trishuli River Bridge, Baireni Syaltar Sadak</b><br>Status: Washed out</div>`)[0];
+                popup_0356aec074bdf9117f482b84591fd0ec.setContent(html_f2a6a0476b709ab09a931707dd525aa6);
+            
+        
+
+        marker_413835996216bcf390712221a65457fb.bindPopup(popup_0356aec074bdf9117f482b84591fd0ec)
+        ;
+
+        
+    
+    
+                marker_413835996216bcf390712221a65457fb.setIcon(icon_6affb086e58fe1a8c756924527660e5a);
+            
+    
+            var marker_2f82102436a2e969a2d66220ac12da80 = L.marker(
+                [27.7979278, 84.9242806],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_31291048366473ac898cd6fe88a611b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f0908b7f99fd03159c0703633c5c7655 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22fe09843b9e1aafa706ca32b5ddcf81 = $(`<div id="html_22fe09843b9e1aafa706ca32b5ddcf81" style="width: 100.0%; height: 100.0%;"><b>Trisuli River Bridge, JareBagaicha</b><br>Status: Washed out</div>`)[0];
+                popup_f0908b7f99fd03159c0703633c5c7655.setContent(html_22fe09843b9e1aafa706ca32b5ddcf81);
+            
+        
+
+        marker_2f82102436a2e969a2d66220ac12da80.bindPopup(popup_f0908b7f99fd03159c0703633c5c7655)
+        ;
+
+        
+    
+    
+                marker_2f82102436a2e969a2d66220ac12da80.setIcon(icon_31291048366473ac898cd6fe88a611b5);
+            
+    
+            var marker_80655c7e2d4de883c4bd2db8059344a3 = L.marker(
+                [27.8068861, 84.9018806],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_9d469134ff7c5d3b46b5083cce184ecf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4e230ff833e24e239abb8d07e35ca81f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61b54ee0d5fb08ff0db458e6e59c0afe = $(`<div id="html_61b54ee0d5fb08ff0db458e6e59c0afe" style="width: 100.0%; height: 100.0%;"><b>Trisuli River Bridge, Ghatbesi</b><br>Status: Washed out</div>`)[0];
+                popup_4e230ff833e24e239abb8d07e35ca81f.setContent(html_61b54ee0d5fb08ff0db458e6e59c0afe);
+            
+        
+
+        marker_80655c7e2d4de883c4bd2db8059344a3.bindPopup(popup_4e230ff833e24e239abb8d07e35ca81f)
+        ;
+
+        
+    
+    
+                marker_80655c7e2d4de883c4bd2db8059344a3.setIcon(icon_9d469134ff7c5d3b46b5083cce184ecf);
+            
+    
+            var marker_75a28fe5346886c44938205b3f6735fb = L.marker(
+                [27.8025444, 84.844075],
+                {
+}
+            ).addTo(map_2a8505091a6d72185f85f0126b558a73);
+        
+    
+            var icon_c3810c9426c2c87e1314d12f688a5aec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "black",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a5fb4cd732e359d2e94c46c3b5e48aec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40791558679876b9956a4091e582ad3d = $(`<div id="html_40791558679876b9956a4091e582ad3d" style="width: 100.0%; height: 100.0%;"><b>Trishuli River Bridge, Furke Khola</b><br>Status: Washed out</div>`)[0];
+                popup_a5fb4cd732e359d2e94c46c3b5e48aec.setContent(html_40791558679876b9956a4091e582ad3d);
+            
+        
+
+        marker_75a28fe5346886c44938205b3f6735fb.bindPopup(popup_a5fb4cd732e359d2e94c46c3b5e48aec)
+        ;
+
+        
+    
+    
+                marker_75a28fe5346886c44938205b3f6735fb.setIcon(icon_c3810c9426c2c87e1314d12f688a5aec);
+            
+</script>
+</html>
